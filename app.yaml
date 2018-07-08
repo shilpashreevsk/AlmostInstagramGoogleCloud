@@ -1,0 +1,11 @@
+runtime: python
+env: flex
+entrypoint: gunicorn -b :$PORT main:app
+
+runtime_config:
+  python_version: 2
+
+env_variables:
+  CLOUDSQL_CONNECTION_NAME: mysql:unix_socket='/cloudsql/shilpacloudproject:us-central1:mysql-shilpa080292';dbname='cloud_final'
+  CLOUDSQL_USER: 'root'
+  CLOUDSQL_PASSWORD: 'shOne12#'
