@@ -10,13 +10,13 @@ app=Flask(__name__)
 gcs = storage.Client.from_service_account_json("/home/shilpashreesvp/cloud_7/static/shilpa_shree.json")
 
 # Get the bucket that the file will be uploaded to.
-bucket = gcs.get_bucket('shilpa-bucket')
+bucket = gcs.get_bucket('')
 
-host = "35.224.143.185"
-dbname = "cloud_final"
-user = "root"
-password = "shOne12#"
-cloud_unix_socket='/cloudsql/shilpacloudproject:us-central1:mysql-shilpa080292'
+host = ""
+dbname = ""
+user = ""
+password = ""
+cloud_unix_socket=''
 
 conn = pymysql.connect( host=host,user=user, passwd=password, db=dbname)
 conn.autocommit(True)
